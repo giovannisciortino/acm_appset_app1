@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/giovannisciortino/acm_appset_app1.git'
-    targetRevision: HEAD
+    targetRevision: noprod1
     path: workloads/service1  # Punta al deployment reale
   destination:
     server: 'https://kubernetes.default.svc'
