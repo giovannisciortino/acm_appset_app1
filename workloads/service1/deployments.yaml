@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app1-noprod1-service1
+  namespace: app1-noprod1
+  labels:
+    app: service1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service1
+  template:
+    metadata:
+      labels:
+        app: service1
+    spec:
+      containers:
+      - name: main
+        image: quay.io/gsciorti/openshift4/ose-hello-openshift-rhel8
+        ports:
+        - containerPort: 8080
